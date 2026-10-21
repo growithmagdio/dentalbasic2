@@ -1,0 +1,112 @@
+{
+  "_note": "Every image on the site. `source` is the original Higgsfield render; run `npm run assets` to download and optimise them into /public. DEMO: replace doctor and clinic photos with real ones before launch (drop a new file in assets-src/ and re-run, or change `source`).",
+  "images": {
+    "doctor-portrait": {
+      "path": "/images/doctor-portrait.webp",
+      "width": 1792,
+      "height": 2240,
+      "alt": "Dr. Jerusha Samuel in a white coat in a bright treatment room",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100255_be41913e-0cea-4863-96b5-25fb6e5ea48f.png"
+    },
+    "clinic-reception": {
+      "path": "/images/clinic-reception.webp",
+      "width": 2048,
+      "height": 1360,
+      "alt": "Calm clinic reception with an oak counter, teal bench and soft daylight",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100254_82d55aeb-fc17-4916-bb4a-32581b8f6d67.png"
+    },
+    "clinic-treatment-room": {
+      "path": "/images/clinic-treatment-room.webp",
+      "width": 2048,
+      "height": 1360,
+      "alt": "Bright treatment room with a teal dental chair and sealed instrument tray",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100255_02d7b82b-453f-4d29-9037-eaf8f69ca4d7.png"
+    },
+    "clinic-sterilisation": {
+      "path": "/images/clinic-sterilisation.webp",
+      "width": 1792,
+      "height": 2240,
+      "alt": "Sealed sterilisation pouches beside a closed autoclave",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100257_f5307b47-96ee-4238-b2d6-197ddaa16f06.png"
+    },
+    "visit-consultation": {
+      "path": "/images/visit-consultation.webp",
+      "width": 2048,
+      "height": 1360,
+      "alt": "The dentist explaining a treatment plan to a patient using a dental model",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100305_049b7562-6df1-4704-88c1-2c7dde6b61df.png"
+    },
+    "treat-checkup-cleaning": {
+      "path": "/images/treat-checkup-cleaning.webp",
+      "width": 1792,
+      "height": 2240,
+      "alt": "Dental mirror and scaler laid on a folded teal cloth",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100256_5d2d577b-bec2-4552-9956-5dd031265154.png"
+    },
+    "treat-root-canal": {
+      "path": "/images/treat-root-canal.webp",
+      "width": 1792,
+      "height": 2240,
+      "alt": "Fine root canal files arranged in a fan on a ceramic tray",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100256_e1ad8e17-388e-434f-bea5-855bba88c824.png"
+    },
+    "treat-implants": {
+      "path": "/images/treat-implants.webp",
+      "width": 1792,
+      "height": 2240,
+      "alt": "A titanium implant post beside a porcelain crown on travertine",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100258_6056931c-b6f3-49cc-a68c-2fb83738f3fc.png"
+    },
+    "treat-braces-aligners": {
+      "path": "/images/treat-braces-aligners.webp",
+      "width": 1792,
+      "height": 2240,
+      "alt": "Clear aligners resting on an open white case with fresh mint",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100256_87702865-48ab-4c66-a0d4-c8cb7a51c05b.png"
+    },
+    "treat-whitening-veneers": {
+      "path": "/images/treat-whitening-veneers.webp",
+      "width": 1792,
+      "height": 2240,
+      "alt": "Porcelain shade guide tabs fanned out in an arc",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100255_a41e3b99-9368-4abb-9ce1-f52349164a10.png"
+    },
+    "treat-kids-dentistry": {
+      "path": "/images/treat-kids-dentistry.webp",
+      "width": 1792,
+      "height": 2240,
+      "alt": "A child's toothbrush, small hourglass and a soft toy tooth",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100254_7aefb973-aec2-419b-a46a-4373e984d7ef.png"
+    }
+  },
+  "hero": {
+    "posterDesktop": {
+      "path": "/hero/poster-desktop.webp",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100510_d0e5e17a-974a-444c-a366-f186f19f4dc8.png"
+    },
+    "finalDesktop": {
+      "path": "/hero/final-desktop.webp",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100254_2cd05331-ef5a-4022-815d-e1acee81d69c.png"
+    },
+    "posterMobile": {
+      "path": "/hero/poster-mobile.webp",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100512_59330380-2263-416a-bf9d-91c21011f044.png"
+    },
+    "finalMobile": {
+      "path": "/hero/final-mobile.webp",
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_100254_ac8b326c-b874-4a9a-bd62-557639c6e204.png"
+    },
+    "videoDesktop": {
+      "dir": "/hero/desktop",
+      "frames": 120,
+      "width": 1600,
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_101437_e2de12c1-b824-428a-a690-2409cc959011.mp4"
+    },
+    "videoMobile": {
+      "dir": "/hero/mobile",
+      "frames": 72,
+      "width": 900,
+      "source": "https://d8j0ntlcm91z4.cloudfront.net/user_3GRAXR48bBDDxLdKefeO7mdujTi/hf_20261021_101438_0790b06c-0a53-4521-9759-359a90878a84.mp4"
+    }
+  }
+}
