@@ -23,11 +23,15 @@ export default function GalleryPage() {
       <section className="pb-[var(--section)]">
         <div className="container-x">
           {gallery.length > 0 ? (
-            <ul className="grid gap-6 md:grid-cols-2">
+            <ul className="grid gap-6 md:grid-cols-2" data-reveal="stagger">
               {gallery.map((c) => (
-                <li key={c.before}>
+                <li key={c.before} className="rounded-[var(--radius-card)] border border-rule bg-surface p-4 sm:p-5 shadow-sm transition hover:shadow-md">
                   <BeforeAfter before={c.before} after={c.after} alt={c.alt} />
-                  <p className="t-small mt-3 text-muted">{c.treatment}</p>
+                  <div className="mt-4 flex items-center justify-between gap-3">
+                    <h2 className="font-semibold text-ink text-[1.1rem]">{c.treatment}</h2>
+                    <span className="t-small text-accent font-medium">Drag slider to compare</span>
+                  </div>
+                  <p className="t-small mt-1.5 text-muted">{c.alt}</p>
                 </li>
               ))}
             </ul>

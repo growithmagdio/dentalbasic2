@@ -23,9 +23,16 @@ export function BeforeAfter({ before, after, alt }: { before: string; after: str
         aria-label={`Compare before and after: ${alt}`}
         className="absolute inset-0 size-full cursor-ew-resize opacity-0"
       />
+      {/* Before / After labels */}
+      <span className="glass absolute left-3 top-3 pointer-events-none z-10 rounded-full px-2.5 py-1 text-[0.75rem] font-bold tracking-wide uppercase text-ink/80">
+        Before
+      </span>
+      <span className="glass absolute right-3 top-3 pointer-events-none z-10 rounded-full px-2.5 py-1 text-[0.75rem] font-bold tracking-wide uppercase text-ink/80">
+        After
+      </span>
       <span
         aria-hidden
-        className="glass glass-lens pointer-events-none absolute top-1/2 grid size-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full text-sm font-semibold"
+        className="glass glass-lens pointer-events-none absolute top-1/2 grid size-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full text-sm font-semibold shadow-md"
         style={{ left: `${pos}%` }}
       >
         ⇆

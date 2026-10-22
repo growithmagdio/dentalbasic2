@@ -16,7 +16,7 @@ export function PageIntro({
 }) {
   const all = [{ name: "Home", path: "/" }, ...crumbs];
   return (
-    <section className="relative isolate overflow-hidden pb-[clamp(3rem,6vw,5rem)] pt-[calc(var(--header-h)+clamp(4rem,9vw,7rem))]">
+    <section className="relative isolate overflow-hidden pb-[clamp(2.5rem,5vw,5rem)] pt-[calc(var(--header-h)+clamp(2.5rem,6vw,7rem))]">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[radial-gradient(60%_80%_at_85%_10%,var(--mist),transparent_70%),radial-gradient(40%_60%_at_10%_0%,#fff,transparent_70%),linear-gradient(180deg,#EEF4F3,var(--paper))]"
@@ -40,8 +40,8 @@ export function PageIntro({
             ))}
           </ol>
         </nav>
-        <h1 className="t-display mt-5 max-w-[16ch] !text-[clamp(2.6rem,5.4vw,5rem)]">{title}</h1>
-        {lead && <p className="t-lead mt-5 !max-w-[56ch]">{lead}</p>}
+        <h1 className="t-display mt-3.5 sm:mt-5 max-w-[16ch] !text-[clamp(2.1rem,5vw,5rem)]">{title}</h1>
+        {lead && <p className="t-lead mt-3 sm:mt-5 !max-w-[56ch] text-[1rem] sm:text-[1.2rem]">{lead}</p>}
         {children}
       </div>
       <JsonLd data={breadcrumbLd(all)} />
