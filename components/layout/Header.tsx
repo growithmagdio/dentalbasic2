@@ -41,10 +41,10 @@ export function Header() {
   const isActive = (href: string) => pathname?.startsWith(href);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 px-2.5 pt-2.5 sm:px-4 sm:pt-4">
       <div
         data-glass-follow
-        className={`glass mx-auto flex h-[var(--header-h)] max-w-[1180px] items-center justify-between rounded-full pl-5 pr-2 transition-[--g-alpha] duration-500 ${
+        className={`glass mx-auto flex h-[var(--header-h)] max-w-[1180px] items-center justify-between rounded-full pl-4 pr-1.5 sm:pl-5 sm:pr-2 transition-[--g-alpha] duration-500 ${
           scrolled ? "[--g-alpha:0.4]" : ""
         }`}
       >
@@ -56,7 +56,7 @@ export function Header() {
             height={200}
             unoptimized
             priority
-            className="h-[40px] w-auto sm:h-[44px]"
+            className="h-[36px] w-auto sm:h-[44px]"
           />
         </Link>
 

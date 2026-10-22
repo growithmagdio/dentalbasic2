@@ -57,10 +57,10 @@ export default async function TreatmentPage({ params }: PageProps<"/treatments/[
                 <li aria-current="page" className="text-ink">{t.name}</li>
               </ol>
             </nav>
-            <h1 className="t-display mt-5 !text-[clamp(2.6rem,5.2vw,4.8rem)]">{t.name}</h1>
-            <p className="t-lead mt-5">{t.short}</p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <TrackedLink event="book_click" location={`treatment_${t.slug}`} href="#book" className="btn btn-primary">
+            <h1 className="t-display mt-4 sm:mt-5 !text-[clamp(2.1rem,5vw,4.8rem)]">{t.name}</h1>
+            <p className="t-lead mt-3 sm:mt-5 text-[1rem] sm:text-[1.125rem]">{t.short}</p>
+            <div className="mt-6 sm:mt-7 flex flex-wrap gap-2.5 sm:gap-3">
+              <TrackedLink event="book_click" location={`treatment_${t.slug}`} href="#book" className="btn btn-primary max-sm:!min-h-[46px] max-sm:!px-4">
                 Book a consultation
               </TrackedLink>
               <TrackedLink
@@ -70,7 +70,7 @@ export default async function TreatmentPage({ params }: PageProps<"/treatments/[
                 target="_blank"
                 rel="noopener"
                 data-glass-follow
-                className="glass btn btn-glass"
+                className="glass btn btn-glass max-sm:!min-h-[46px] max-sm:!px-4"
               >
                 <MessageCircle size={18} aria-hidden /> Ask on WhatsApp
               </TrackedLink>
@@ -80,7 +80,7 @@ export default async function TreatmentPage({ params }: PageProps<"/treatments/[
             <div className="media aspect-[4/5]">
               <Image src={i.src} alt={i.alt} width={i.width} height={i.height} sizes="(min-width:1024px) 38vw, 80vw" priority />
             </div>
-            <dl data-glass-follow className="glass absolute -bottom-5 left-4 right-4 grid grid-cols-3 gap-2 rounded-[22px] p-4 sm:left-[-1.5rem] sm:right-auto sm:min-w-[340px]">
+            <dl data-glass-follow className="glass absolute -bottom-5 left-2.5 right-2.5 sm:left-[-1.5rem] sm:right-auto sm:min-w-[340px] grid grid-cols-3 gap-2 rounded-[18px] sm:rounded-[22px] p-3.5 sm:p-4">
               <div>
                 <dt className="t-small text-ink/60">From</dt>
                 <dd className="tnum font-semibold text-accent">{formatINR(t.priceFrom)}</dd>

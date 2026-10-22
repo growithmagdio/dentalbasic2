@@ -25,15 +25,15 @@ export default function Home() {
       {/* 1 — Hero */}
       <HeroSequence caption="Porcelain crown on a titanium implant">
         <div className="max-w-[640px] landscape:lg:max-w-[46%]">
-          <OpenStatus className="glass glass-clear rounded-full px-3.5 py-1.5 text-[0.88rem] font-semibold text-ink/85" />
-          <h1 id="hero-title" className="t-display mt-5 text-ink">
+          <OpenStatus className="glass glass-clear rounded-full px-3.5 py-1.5 text-[0.85rem] sm:text-[0.88rem] font-semibold text-ink/85" />
+          <h1 id="hero-title" className="t-display mt-4 sm:mt-5 text-ink max-sm:!text-[2.2rem] max-sm:!leading-[1.12]">
             Gentle, precise dentistry in Anna Nagar,&nbsp;Madurai.
           </h1>
-          <p className="t-lead mt-4 !text-ink/75 max-sm:!text-[1.05rem]">
+          <p className="t-lead mt-3 sm:mt-4 !text-ink/75 text-[1rem] sm:text-[1.125rem]">
             Check-ups, root canals, implants and aligners with {site.doctor.name}. Clear prices before we start, and same-week appointments.
           </p>
-          <div className="mt-7 flex flex-nowrap gap-2 sm:mt-8 sm:gap-3">
-            <TrackedLink event="book_click" location="hero" href="#book" className="btn btn-primary max-sm:!px-4">
+          <div className="mt-6 flex flex-wrap gap-2.5 sm:mt-8 sm:flex-nowrap sm:gap-3">
+            <TrackedLink event="book_click" location="hero" href="#book" className="btn btn-primary max-sm:!min-h-[46px] max-sm:!px-4 max-sm:text-[0.95rem]">
               Book an appointment
             </TrackedLink>
             <TrackedLink
@@ -43,7 +43,7 @@ export default function Home() {
               target="_blank"
               rel="noopener"
               data-glass-follow
-              className="glass btn btn-glass max-sm:!px-4"
+              className="glass btn btn-glass max-sm:!min-h-[46px] max-sm:!px-4 max-sm:text-[0.95rem]"
             >
               <MessageCircle size={18} aria-hidden /> WhatsApp
             </TrackedLink>
@@ -62,9 +62,9 @@ export default function Home() {
           ].map(([a, b]) => (
             <li
               key={a}
-              className="border-rule py-7 pr-4 even:border-l even:pl-5 [&:nth-child(n+3)]:border-t lg:pl-6 lg:first:pl-0 lg:[&:nth-child(n+2)]:border-l lg:[&:nth-child(n+3)]:border-t-0"
+              className="border-rule py-5 sm:py-7 pr-3 sm:pr-4 even:border-l even:pl-4 sm:even:pl-5 [&:nth-child(n+3)]:border-t lg:pl-6 lg:first:pl-0 lg:[&:nth-child(n+2)]:border-l lg:[&:nth-child(n+3)]:border-t-0"
             >
-              <p className="font-display text-[1.6rem] leading-none tracking-tight">{a}</p>
+              <p className="font-display text-[1.4rem] sm:text-[1.6rem] leading-none tracking-tight">{a}</p>
               <p className="t-small mt-1.5 text-muted">{b}</p>
             </li>
           ))}
@@ -92,10 +92,10 @@ export default function Home() {
           </div>
           <ul
             data-reveal="stagger"
-            className="snap-row -mx-[var(--gutter)] mt-12 flex gap-4 overflow-x-auto px-[var(--gutter)] pb-2 md:mx-0 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:px-0 lg:grid-cols-3 lg:gap-6"
+            className="snap-row -mx-[var(--gutter)] mt-8 sm:mt-12 flex gap-3.5 sm:gap-4 overflow-x-auto px-[var(--gutter)] pb-3 md:mx-0 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:px-0 lg:grid-cols-3 lg:gap-6"
           >
             {treatments.map((t) => (
-              <li key={t.slug} className="w-[78vw] max-w-[340px] shrink-0 md:w-auto md:max-w-none">
+              <li key={t.slug} className="w-[80vw] max-w-[320px] sm:max-w-[340px] shrink-0 md:w-auto md:max-w-none">
                 <TreatmentCard t={t} />
               </li>
             ))}
@@ -113,8 +113,8 @@ export default function Home() {
             <div className="media aspect-[4/5]">
               <Image src={doctor.src} alt={doctor.alt} width={doctor.width} height={doctor.height} sizes="(min-width:1024px) 40vw, 90vw" />
             </div>
-            <div data-glass-follow className="glass absolute -bottom-6 right-4 max-w-[78%] rounded-[22px] p-4 sm:right-[-1.5rem] lg:right-[-3rem]">
-              <p className="font-semibold">{site.doctor.name}</p>
+            <div data-glass-follow className="glass absolute -bottom-5 right-2.5 sm:-bottom-6 sm:right-[-1.5rem] lg:right-[-3rem] max-w-[88%] sm:max-w-[78%] rounded-[18px] sm:rounded-[22px] p-3.5 sm:p-4">
+              <p className="font-semibold text-[0.95rem] sm:text-base">{site.doctor.name}</p>
               <p className="t-small text-ink/75">{site.doctor.qualifications}</p>
               <p className="t-small tnum text-ink/60">{site.doctor.registration}</p>
             </div>
@@ -134,14 +134,14 @@ export default function Home() {
 
       {/* 6 — Inside the clinic */}
       <section aria-labelledby="clinic-title" className="section pt-0 bg-[#EFEBE4]">
-        <div className="relative h-[78svh] min-h-[460px] overflow-hidden">
+        <div className="relative h-[65svh] sm:h-[78svh] min-h-[380px] sm:min-h-[460px] overflow-hidden">
           <div data-parallax="7" className="absolute inset-x-0 -top-[8%] h-[116%]">
             <Image src={reception.src} alt={reception.alt} width={reception.width} height={reception.height} sizes="100vw" className="size-full object-cover" />
           </div>
-          <div className="container-x relative flex h-full items-end pb-8 sm:pb-12">
-            <div data-glass-follow className="glass max-w-[520px] rounded-[28px] p-6 sm:p-8">
-              <h2 id="clinic-title" className="t-h2">Inside the clinic</h2>
-              <p className="mt-3 text-ink/80">
+          <div className="container-x relative flex h-full items-end pb-6 sm:pb-12">
+            <div data-glass-follow className="glass max-w-[520px] rounded-[22px] sm:rounded-[28px] p-5 sm:p-8">
+              <h2 id="clinic-title" className="t-h2 !text-[1.8rem] sm:!text-[clamp(2rem,3.6vw,3.25rem)]">Inside the clinic</h2>
+              <p className="mt-2.5 sm:mt-3 text-ink/80 text-[0.95rem] sm:text-base">
                 A quiet reception, two bright treatment rooms and a sterilisation area you’re welcome to see. Spotless is the minimum.
               </p>
             </div>
@@ -199,9 +199,9 @@ export default function Home() {
             <h2 id="reviews-title" className="t-h2">What patients say</h2>
             {reviewsAreDemo && <span className="t-small rounded-full border border-rule px-3 py-1 text-muted">Sample reviews</span>}
           </div>
-          <ul className="mt-10 grid gap-5 md:grid-cols-3" data-reveal="stagger">
+          <ul className="mt-8 sm:mt-10 grid gap-4 sm:gap-5 md:grid-cols-3" data-reveal="stagger">
             {reviews.map((r) => (
-              <li key={r.name} className="flex flex-col rounded-[var(--radius-card)] border border-rule bg-surface p-7">
+              <li key={r.name} className="flex flex-col rounded-[var(--radius-card)] border border-rule bg-surface p-5 sm:p-7">
                 <p className="text-[1.05rem] leading-relaxed text-ink/90">“{r.text}”</p>
                 <div className="mt-auto flex items-center gap-3 pt-6">
                   <span aria-hidden className="grid size-11 place-items-center rounded-full bg-accent-soft font-semibold text-accent">

@@ -6,9 +6,10 @@
  */
 import fs from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const media = JSON.parse(await fs.readFile(path.join(root, "content/media.json"), "utf8"));
 const PUB = path.join(root, "public");
 const WIDTHS = [320, 480, 640, 960, 1280, 1920];

@@ -172,9 +172,9 @@ export function HeroSequence({ children, caption }: { children: ReactNode; capti
   );
 
   return (
-    <section ref={root} aria-labelledby="hero-title" className="relative isolate h-[100svh] min-h-[640px] overflow-hidden bg-[linear-gradient(90deg,#F7F5F1,#CFE3E1)] portrait:bg-[linear-gradient(180deg,#F7F5F1,#CFE3E1)]">
-      {/* Media layer: full-bleed on landscape; lower ~62% on portrait so the headline sits above the tooth */}
-      <div className="absolute inset-0 -z-20 portrait:top-auto portrait:h-[62%] portrait:[mask-image:linear-gradient(to_bottom,transparent,#000_22%)]">
+    <section ref={root} aria-labelledby="hero-title" className="relative isolate h-[100svh] min-h-[560px] sm:min-h-[640px] overflow-hidden bg-[linear-gradient(90deg,#F7F5F1,#CFE3E1)] portrait:bg-[linear-gradient(180deg,#F7F5F1,#CFE3E1)]">
+      {/* Media layer: full-bleed on landscape; lower ~55-62% on portrait so the headline sits cleanly above the tooth */}
+      <div className="absolute inset-0 -z-20 portrait:top-auto portrait:h-[55%] sm:portrait:h-[62%] portrait:[mask-image:linear-gradient(to_bottom,transparent,#000_22%)]">
         {/* Poster = first frame (shown instantly, LCP) */}
         <picture className="hero-start">
           <source media="(min-aspect-ratio: 1/1)" srcSet={hero.posterDesktop} />
@@ -201,7 +201,7 @@ export function HeroSequence({ children, caption }: { children: ReactNode; capti
       {/* soft wash so text stays legible over any frame */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgb(247_245_241/0.75)_0%,rgb(247_245_241/0.35)_38%,transparent_60%)] portrait:bg-none" />
 
-      <div ref={textRef} className="container-x flex h-full flex-col justify-center pt-[calc(var(--header-h)+1rem)] portrait:justify-start portrait:pt-[calc(var(--header-h)+2.25rem)]">
+      <div ref={textRef} className="container-x flex h-full flex-col justify-center pt-[calc(var(--header-h)+1rem)] portrait:justify-start portrait:pt-[calc(var(--header-h)+1.25rem)] sm:portrait:pt-[calc(var(--header-h)+2.25rem)]">
         {children}
       </div>
 

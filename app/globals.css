@@ -17,7 +17,7 @@
   --radius-card: 22px;
   --radius-media: 22px;
   --gutter: clamp(16px, 4vw, 48px);
-  --section: clamp(5rem, 10vw, 10rem);
+  --section: clamp(3.75rem, 8vw, 10rem);
   --header-h: 64px;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -62,13 +62,15 @@ html {
   color: var(--ink);
   -webkit-text-size-adjust: 100%;
   scroll-padding-top: calc(var(--header-h) + 24px);
+  overflow-x: clip;
 }
 body {
   font-family: var(--font-sans);
-  font-size: clamp(1.0625rem, 0.4vw + 0.98rem, 1.125rem);
+  font-size: clamp(1rem, 0.4vw + 0.95rem, 1.125rem);
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 ::selection {
   background: var(--accent);
@@ -103,8 +105,8 @@ html.lenis body {
 .t-display {
   font-family: var(--font-display);
   font-weight: 450;
-  font-size: clamp(2.75rem, 6.2vw, 6rem);
-  line-height: 1;
+  font-size: clamp(2.25rem, 5.6vw, 6rem);
+  line-height: 1.05;
   letter-spacing: -0.025em;
   font-variation-settings: "opsz" 144;
   text-wrap: balance;
@@ -112,8 +114,8 @@ html.lenis body {
 .t-h2 {
   font-family: var(--font-display);
   font-weight: 450;
-  font-size: clamp(2rem, 3.6vw, 3.25rem);
-  line-height: 1.05;
+  font-size: clamp(1.8rem, 3.4vw, 3.25rem);
+  line-height: 1.08;
   letter-spacing: -0.02em;
   font-variation-settings: "opsz" 120;
   text-wrap: balance;
@@ -121,8 +123,8 @@ html.lenis body {
 .t-statement {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(1.75rem, 3.4vw, 3.1rem);
-  line-height: 1.18;
+  font-size: clamp(1.45rem, 3vw, 3.1rem);
+  line-height: 1.2;
   letter-spacing: -0.015em;
   font-variation-settings: "opsz" 96;
 }
@@ -323,11 +325,11 @@ html.lg-refract .glass-lens {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 48px;
-  padding: 0 1.4rem;
+  min-height: 44px;
+  padding: 0 1.25rem;
   border-radius: 999px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1;
   white-space: nowrap;
   transition:
@@ -335,6 +337,13 @@ html.lg-refract .glass-lens {
     background-color 0.25s,
     box-shadow 0.35s var(--ease-out);
   -webkit-tap-highlight-color: transparent;
+}
+@media (min-width: 640px) {
+  .btn {
+    min-height: 48px;
+    padding: 0 1.4rem;
+    font-size: 1rem;
+  }
 }
 .btn:active {
   transform: scale(0.97);
@@ -397,6 +406,7 @@ html.lg-refract .glass-lens {
 /* Horizontal snap on mobile */
 .snap-row {
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 .snap-row::-webkit-scrollbar {

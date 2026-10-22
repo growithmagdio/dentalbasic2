@@ -40,14 +40,14 @@ export default function AboutPage() {
                 <p key={p}>{p}</p>
               ))}
             </div>
-            <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-[var(--radius-card)] border border-rule bg-rule">
+            <dl className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-px overflow-hidden rounded-[var(--radius-card)] border border-rule bg-rule">
               {[
                 ["Qualifications", site.doctor.qualifications],
                 ["Registration", site.doctor.registration],
                 ["Experience", `${site.doctor.yearsInPractice} years`],
                 ["Languages", site.languages.join(" and ")],
               ].map(([k, v]) => (
-                <div key={k} className="bg-surface p-5">
+                <div key={k} className="bg-surface p-4 sm:p-5">
                   <dt className="t-small text-muted">{k}</dt>
                   <dd className="tnum mt-1 font-semibold">{v}</dd>
                 </div>

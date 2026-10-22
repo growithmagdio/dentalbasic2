@@ -109,7 +109,7 @@ export function BookingForm({ defaultTreatment = "" }: { defaultTreatment?: stri
     );
   }
 
-  const field = "mt-1.5 block w-full rounded-2xl border border-ink/10 bg-white/80 px-4 text-[1rem] text-ink shadow-[inset_0_1px_2px_rgb(20_32_43/0.06)] outline-none transition focus:border-accent focus:bg-white focus:ring-4 focus:ring-accent/15 aria-[invalid=true]:border-red-600";
+  const field = "mt-1.5 block w-full rounded-2xl border border-ink/10 bg-white/80 px-4 text-[16px] text-ink shadow-[inset_0_1px_2px_rgb(20_32_43/0.06)] outline-none transition focus:border-accent focus:bg-white focus:ring-4 focus:ring-accent/15 aria-[invalid=true]:border-red-600";
   const label = "text-[0.92rem] font-semibold text-ink";
   const err = (f: string) =>
     errors[f] ? (
@@ -186,7 +186,7 @@ export function BookingForm({ defaultTreatment = "" }: { defaultTreatment?: stri
         <button type="submit" disabled={state === "sending"} className="btn btn-primary w-full sm:w-auto disabled:opacity-70">
           {state === "sending" ? <><Loader2 size={18} className="animate-spin" aria-hidden /> Sending…</> : "Request appointment"}
         </button>
-        <p className="t-small text-muted">We confirm every request by phone.</p>
+        <p className="t-small text-muted text-center sm:text-left">We confirm every request by phone.</p>
       </div>
       {state === "error" && (
         <p role="alert" className="sm:col-span-2 rounded-2xl bg-red-50 p-4 text-[0.95rem] text-red-800">

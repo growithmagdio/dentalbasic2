@@ -24,14 +24,14 @@ export function StickyBookBar() {
       }`}
       aria-hidden={hidden}
     >
-      <nav aria-label="Quick contact" data-glass-follow className="glass grid grid-cols-3 gap-1 rounded-full p-1.5">
+      <nav aria-label="Quick contact" data-glass-follow className="glass grid grid-cols-3 gap-1 rounded-full p-1.5 shadow-lg">
         <a
           href="#book"
           tabIndex={hidden ? -1 : 0}
           onClick={() => track("book_click", { location: "sticky_bar" })}
-          className="btn btn-primary !min-h-[52px] !px-2 text-[0.95rem]"
+          className="btn btn-primary !min-h-[48px] !px-1 text-[0.85rem] font-semibold"
         >
-          <CalendarCheck size={18} aria-hidden /> Book
+          <CalendarCheck size={16} aria-hidden /> Book
         </a>
         <a
           href={whatsappUrl("an appointment")}
@@ -39,17 +39,17 @@ export function StickyBookBar() {
           rel="noopener"
           tabIndex={hidden ? -1 : 0}
           onClick={() => track("whatsapp_click", { location: "sticky_bar" })}
-          className="btn !min-h-[52px] !px-2 text-[0.95rem] text-ink hover:bg-white/50"
+          className="btn !min-h-[48px] !px-1 text-[0.85rem] font-semibold text-ink hover:bg-white/50"
         >
-          <MessageCircle size={18} aria-hidden /> WhatsApp
+          <MessageCircle size={16} aria-hidden /> WhatsApp
         </a>
         <a
           href={site.phoneHref}
           tabIndex={hidden ? -1 : 0}
           onClick={() => track("call_click", { location: "sticky_bar" })}
-          className="btn !min-h-[52px] !px-2 text-[0.95rem] text-ink hover:bg-white/50"
+          className="btn !min-h-[48px] !px-1 text-[0.85rem] font-semibold text-ink hover:bg-white/50"
         >
-          <Phone size={18} aria-hidden /> Call
+          <Phone size={16} aria-hidden /> Call
         </a>
       </nav>
     </div>

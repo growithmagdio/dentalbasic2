@@ -13,13 +13,14 @@
 import fs from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import sharp from "sharp";
 import ffmpegPath from "ffmpeg-static";
 
 const run = promisify(execFile);
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const media = JSON.parse(await fs.readFile(path.join(root, "content/media.json"), "utf8"));
 const SRC = path.join(root, "assets-src");
 const PUB = path.join(root, "public");
